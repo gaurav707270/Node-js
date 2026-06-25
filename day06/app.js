@@ -2,4 +2,4 @@
 
 // fs.writeFileSync("index.html", "<div></div>")
 
-console.log("file created")
+console.log("file created") 
