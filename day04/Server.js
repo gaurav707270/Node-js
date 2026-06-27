@@ -3,9 +3,9 @@ import path from "path";
 import fs from "fs";
 
 
-if (!fs.existsSync("logs.txt")) {
-    fs.writeFileSync("logs.txt", "")
-}
+// if (!fs.existsSync("logs.txt")) {
+//     fs.writeFileSync("logs.txt", "")
+// }
 
 
 const server = http.createServer((req, res) => {
