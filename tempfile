@@ -1,0 +1,39 @@
+const fs = require("fs")
+
+http.createServer((req, res) => {
+
+    fs.readFile("form.html","utf-8",(error,data) =>{
+        res.writeHead(500,{"Content-type":"text/plain"})
+        if(error){
+            res.end("internal server error")
+        }
+    })
+
+    res.end("text")
+
+}).listen(2100)
+
+
+
+
+
+
+// http.createServer((req, res) => {
+//     res.writeHead(200, { "Content-Type": "text/html" })
+//     console.log(req.url)
+
+
+//     if (req.url == "/") {
+//         res.write(`<form action="/sibmite" method="post">
+        
+//         <input type="text" placeholder="enter name" name="name"/>
+//         <input type="email" placeholder="enter email" name="email"/>
+//         <button>submite</button>
+//         </form>`)
+//     }
+//     else if (req.url == "/submite") {
+//         res.write("<h1>data submited</h1>")
+//     }
+
+//     res.end()
+// }).listen(2100)
