@@ -1,4 +1,4 @@
-const { addcart, changeQty } = require("./cartModul")
+// const { addcart, changeQty } = require("./cartModul")
 // 
 console.log("wellcome")
 
