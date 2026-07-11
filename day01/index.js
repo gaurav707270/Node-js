@@ -1,5 +1,5 @@
-const { addcart, changeQty } = require("./cartModul")
-
+// const { addcart, changeQty } = require("./cartModul")
+// 
 console.log("wellcome")
 
 console.log(45 * 4)
