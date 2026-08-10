@@ -4,7 +4,7 @@ import fs from "fs";
 
 
 if (!fs.existsSync("logs.txt")) {
-    // fs.writeFileSync("logs.txt", "")
+    fs.writeFileSync("logs.txt", "")
 }
 
 
