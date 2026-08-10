@@ -1,6 +1,6 @@
 import http from "http";
 import path from "path";
-// import fs from "fs";
+import fs from "fs";
 
 
 if (!fs.existsSync("logs.txt")) {
