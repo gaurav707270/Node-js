@@ -15,7 +15,7 @@ if (!fs.existsSync("logs.txt")) {
     res.writeHead(200, {
         "Contect-Type": "text/plain"
     })
-    res.end("Server Running");
+    // res.end("Server Running");
 
     // const log = "request comes on" + req.url + "by " + req.method + " method on" + data;
 
