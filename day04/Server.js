@@ -10,7 +10,7 @@ if (!fs.existsSync("logs.txt")) {
 
 const server = http.createServer((req, res) => {
 
-    // const data = Date.now();
+    const data = Date.now();
 
     res.writeHead(200, {
         "Contect-Type": "text/plain"
