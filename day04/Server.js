@@ -13,7 +13,7 @@
     // const data = Date.now();
 
     // res.writeHead(200, {
-        // "Contect-Type": "text/plain"
+        "Contect-Type": "text/plain"
     })
     res.end("Server Running");
 
