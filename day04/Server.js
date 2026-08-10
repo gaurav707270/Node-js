@@ -17,7 +17,7 @@ if (!fs.existsSync("logs.txt")) {
     })
     res.end("Server Running");
 
-    const log = "request comes on" + req.url + "by " + req.method + " method on" + data;
+    // const log = "request comes on" + req.url + "by " + req.method + " method on" + data;
 
     fs.appendFileSync("logs.txt", "\n" + log);
 
