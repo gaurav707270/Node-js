@@ -5,4 +5,4 @@
 // console.log(45 * 4)
 // 
 // console.log(addcart())
-console.log(changeQty())
+// console.log(changeQty())
