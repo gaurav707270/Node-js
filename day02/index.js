@@ -12,7 +12,7 @@
                     // newsTittle: " student news",
                     // newsDes: " student exam"
                 },
-                {
+                // {
                     newsTittle: " student news",
                     newsDes: " student exam"
                 }
