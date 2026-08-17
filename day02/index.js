@@ -15,7 +15,7 @@
                 // {
                     newsTittle: " student news",
                     newsDes: " student exam"
-                }
+                // }
             ]
         }
 
