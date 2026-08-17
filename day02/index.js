@@ -5,7 +5,7 @@
         // res.end("welcome to http server")
     // }
     // if (req.url == "/news") {
-        const news = {
+        // const news = {
             // status: 1,
             data: [
                 {
