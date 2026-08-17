@@ -6,7 +6,7 @@
     // }
     // if (req.url == "/news") {
         const news = {
-            status: 1,
+            // status: 1,
             data: [
                 {
                     // newsTittle: " student news",
