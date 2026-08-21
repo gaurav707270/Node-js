@@ -8,7 +8,7 @@
         // const news = {
             // status: 1,
             // data: [
-                {
+                // {
                     // newsTittle: " student news",
                     
                     // newsDes: " student exam"
