@@ -7,7 +7,7 @@
     // if (req.url == "/news") {
         // const news = {
             status: 1,
-            data: [
+            // data: [
                 {
                     newsTittle: " student news",
                     newsDes: " student exam"
