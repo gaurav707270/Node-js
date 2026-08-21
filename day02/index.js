@@ -2,7 +2,7 @@
 
 const server = http.createServer((req, res) => {
     // if (req.url == "/") 
-        // res.end("welcome to http server")
+        res.end("welcome to http server")
     // }
     // if (req.url == "/news") {
         // const news = {
