@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
     // res.send({ news: "student news", student: 50, })
 })
 
-app.post("/login", (req, res) => {
+// app.post("/login", (req, res) => {
     console.log(req.body)
     res.send({ news: "student news", student: 50, data: req.body })
 })
