@@ -7,7 +7,7 @@ app.get("/", (req, res) => {
 // })
 // 
 app.get("/news", (req, res) => {
-    res.send({ news: "student news", student: 50, })
+    // res.send({ news: "student news", student: 50, })
 })
 
 app.post("/login", (req, res) => {
