@@ -16,4 +16,4 @@ app.get("/news", (req, res) => {
     // res.send({ news: "student news", student: 50, data: req.body })
 })
 
-// app.listen("5000")
+app.listen("5000")
