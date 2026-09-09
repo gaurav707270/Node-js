@@ -2,7 +2,7 @@
 
 // const app = express()
 
-// app.get("/", (req, res) => {
+app.get("/", (req, res) => {
     // res.send({ status: 200, msg: "home page Api" })
 // })
 
