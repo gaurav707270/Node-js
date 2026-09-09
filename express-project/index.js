@@ -12,7 +12,7 @@ app.get("/news", (req, res) => {
 
 // app.post("/login", (req, res) => {
     
-    // console.log(req.body)
+    console.log(req.body)
     // res.send({ news: "student news", student: 50, data: req.body })
 })
 
