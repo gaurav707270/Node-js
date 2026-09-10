@@ -1,4 +1,4 @@
-// let fs = require("fs")
+let fs = require("fs")
 
 fs.writeFileSync("index.html", "<div></div>")
 
