@@ -2,7 +2,7 @@ import user from "../models/authUser-model.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 
-const signIn = async (req, res) => {
+export const signUP = async (req, res) => {
     try {
         const { role, userName, email, password } = req.body;
 
@@ -55,7 +55,7 @@ const signIn = async (req, res) => {
 }
 
 
-const singIn = async (req, res) => {
+export const singIn = async (req, res) => {
     try {
 
         const { email, password } = req.body
@@ -120,3 +120,4 @@ const singIn = async (req, res) => {
         })
     }
 }
+
