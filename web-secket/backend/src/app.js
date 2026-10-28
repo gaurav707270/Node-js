@@ -31,6 +31,17 @@ io.on("connection", (Socket) => {
         console.log(`${userName} is join in a group`)
 
         await Socket.join(ROOM)
+
+        // send to all
+        // io.to(ROOM).emit("roomNotice",userName)
+
+        // broadcate
+        Socket.to(ROOM).emit("roomNotice",userName)
+    })
+
+
+    Socket.on("chatMessage",async(msg) =>{
+        Socket.to(ROOM).emit("chatMessage",msg)
     })
 })
 
