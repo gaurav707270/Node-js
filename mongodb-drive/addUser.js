@@ -1,7 +1,7 @@
 import { connectDB } from "./server.js";
 
 const addUser = async () =>{
-    const db = await connectDB()
+    // const db = await connectDB()
     const result = await db.collection("users").insertOne({
         name:"kharate gaurav",
         age:22,
