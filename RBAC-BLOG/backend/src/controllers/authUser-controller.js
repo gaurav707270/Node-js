@@ -129,6 +129,44 @@ export const signIn = async (req, res) => {
 }
 
 
+
+export const refreshAccessToken = async (req, res) => {
+    try {
+        const user = req.user;
+
+        const newAccessToken = jwt.sign(
+            {
+                userId: user.userId,
+                role: user.role,
+                email: user.email
+            },
+            process.env.ACCESS_JWT_SECRET,
+            {
+                expiresIn: "1h"
+            }
+        );
+
+        res.cookie("accessToken", newAccessToken, {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === "production",
+            sameSite: "strict",
+            maxAge: 60 * 60 * 1000
+        });
+
+        return res.status(200).json({
+            status: true,
+            message: "Access token refreshed successfully"
+        });
+
+    } catch (error) {
+        return res.status(500).json({
+            status: false,
+            message: error.message
+        });
+    }
+};
+
+
 export const signOut = async (req, res) => {
     try {
         res.clearCookie("accessToken")
