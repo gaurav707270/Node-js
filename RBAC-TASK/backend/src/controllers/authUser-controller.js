@@ -121,3 +121,27 @@ export const singIn = async (req, res) => {
     }
 }
 
+
+export const signOut = async(req,res) =>{
+    try {
+
+        res.clearCookie("accessToken","refreshToken")
+
+
+        return res.status(200).json({
+            status:true,
+            message:"user sign out successfully"
+        })
+
+
+        
+    } catch (error) {
+        console.log(error)
+
+        return res.status(400).json({
+            status:false,
+            message:"user sign out failed",
+            err:error.message
+        })
+    }
+}
