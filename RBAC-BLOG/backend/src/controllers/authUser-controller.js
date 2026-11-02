@@ -138,7 +138,6 @@ export const refreshAccessToken = async (req, res) => {
             {
                 userId: user.userId,
                 role: user.role,
-                email: user.email
             },
             process.env.ACCESS_JWT_SECRET,
             {
@@ -148,8 +147,7 @@ export const refreshAccessToken = async (req, res) => {
 
         res.cookie("accessToken", newAccessToken, {
             httpOnly: true,
-            secure: process.env.NODE_ENV === "production",
-            sameSite: "strict",
+           
             maxAge: 60 * 60 * 1000
         });
 
