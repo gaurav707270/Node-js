@@ -5,6 +5,8 @@ import connectDB from "./config/db.js";
 import cors from "cors";
 import authRoute from "./routes/authUser-route.js";
 import blogRoute from "./routes/blog-route.js";
+import commentRoute from "./routes/comment-route.js";
+import replyRoute from "./routes/reply-route.js";
 
 dotenv.config()
 
@@ -18,11 +20,13 @@ app.use(cookieParser())
 
 app.use(cors({
     credentials:true,
-    origin:"http://localhost:5173/"
+    origin:"http://localhost:5173"
 }))
 
 app.use("/api",authRoute)
 app.use("/api",blogRoute)
+app.use("/api",commentRoute)
+app.use("/api",replyRoute)
 
 
 

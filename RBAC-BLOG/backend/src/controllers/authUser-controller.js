@@ -136,7 +136,7 @@ export const refreshAccessToken = async (req, res) => {
 
         const newAccessToken = jwt.sign(
             {
-                userId: user.userId,
+                _id: user._id,
                 role: user.role,
             },
             process.env.ACCESS_JWT_SECRET,
@@ -144,6 +144,7 @@ export const refreshAccessToken = async (req, res) => {
                 expiresIn: "1h"
             }
         );
+
 
         res.cookie("accessToken", newAccessToken, {
             httpOnly: true,

@@ -16,6 +16,8 @@ export const refreshTokenMiddleware = (req, res, next) => {
             process.env.REFRESH_JWT_SECRET
         );
 
+        console.log(decoded)
+
         req.user = decoded;
 
         next();
