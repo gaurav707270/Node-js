@@ -1,19 +1,38 @@
 import axios from 'axios'
 import React, { useRef } from 'react'
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 export default function SignIn() {
+
+    const navigate = useNavigate()
 
     let emailRef = useRef(null)
     let passwordRef = useRef(null)
 
-    const signIn = async(userData) => {
+    const signIn = async (userData) => {
         try {
 
-            const res = await axios.post("http://localhost:3000/api/signin",userData)
+            const res = await axios.post("http://localhost:3000/api/signin", userData)
 
             console.log(res)
             alert("you signIn successfully")
+
+            console.log("res data ", res.data.data.role)
+
+            localStorage.setItem("userData",JSON.stringify(res.data.data))
+
+            if (res.data.data.role == "user") {
+                navigate("/userDashboard")
+            }
+
+            if (res.data.data.role == "admin") {
+                navigate("/adminDashboard")
+            }
+            
+            if (res.data.data.role == "viewer") {
+                navigate("/viewerDashboard")
+            }
+
 
         } catch (error) {
             console.log(error)
@@ -21,11 +40,11 @@ export default function SignIn() {
         }
     }
 
-    const handleSubmit = () =>{
+    const handleSubmit = () => {
 
         const userData = {
-            email:emailRef.current.value,
-            password:passwordRef.current.value
+            email: emailRef.current.value,
+            password: passwordRef.current.value
         }
 
         console.log(userData)
