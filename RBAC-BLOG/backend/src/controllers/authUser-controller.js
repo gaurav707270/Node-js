@@ -154,7 +154,8 @@ export const refreshAccessToken = async (req, res) => {
 
         return res.status(200).json({
             status: true,
-            message: "Access token refreshed successfully"
+            message: "Access token refreshed successfully",
+            data: await authUser.findById(user._id).select("-password")
         });
 
     } catch (error) {

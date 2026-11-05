@@ -12,7 +12,9 @@ export default function SignIn() {
     const signIn = async (userData) => {
         try {
 
-            const res = await axios.post("http://localhost:3000/api/signin", userData)
+            const res = await axios.post("http://localhost:3000/api/signin", userData,{
+                withCredentials:true
+            })
 
             console.log(res)
             alert("you signIn successfully")
@@ -52,11 +54,44 @@ export default function SignIn() {
         signIn(userData)
     }
 
+    const handleReSignIn = async() =>{
+        try {
+            const res = await axios.post("http://localhost:3000/api/refreshtoken",{},{
+                withCredentials:true
+            })
+
+            console.log(res)
+
+            
+            if (res.data.data.role == "user") {
+                navigate("/userDashboard")
+            }
+
+            if (res.data.data.role == "admin") {
+                navigate("/adminDashboard")
+            }
+            
+            if (res.data.data.role == "viewer") {
+                navigate("/viewerDashboard")
+            }
+
+            
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
 
 
     return (
         <div>
-            <div className='d-flex vh-100 justify-content-center align-items-center'>
+
+            <div className='d-flex vh-100 justify-content-center position-relative align-items-center flex-column '>
+
+                <button onClick={() =>{
+                    handleReSignIn()
+                    alert( "user re signIn successfully")
+                }} className='position-absolute btn btn-outline-info top-0 end-0 m-5'>ReSignIn</button>
 
                 <div className='d-flex flex-column w-25 shadow bg-light p-3 rounded'>
 
