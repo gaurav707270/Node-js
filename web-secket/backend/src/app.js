@@ -1,6 +1,6 @@
 import express from "express";
 import { createServer,  } from "node:http";
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
 import cors from "cors";
 import {  Server} from "socket.io";
 
