@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import {  Server} from "socket.io";
 
-dotenv.config()
+// dotenv.config()
 
 
 const app = express();
