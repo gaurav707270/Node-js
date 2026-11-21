@@ -8,7 +8,7 @@ const server = http.createServer((req, res) => {
         const news = {
             status: 1,
             data: [
-                // {
+                {
                     newsTittle: " student news",
                     
                     newsDes: " student exam"
