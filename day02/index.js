@@ -12,7 +12,7 @@ const server = http.createServer((req, res) => {
                     newsTittle: " student news",
                     
                     newsDes: " student exam"
-                // },
+                },
                 {
                     newsTittle: " student news",
                     newsDes: " student exam"
